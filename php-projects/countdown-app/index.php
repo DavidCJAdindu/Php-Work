@@ -82,6 +82,9 @@
         <span style="font-size: 20px;"> <?php echo $date . " at " . $time; ?> </span>
         <br>
         <span id="demo" style="font-size:40px;"></span>
+        <br>
+        <br>
+        <img src="profil-pic.jpg" alt="ot-trips" height="300px" width="350px">
 
     </div>
 
