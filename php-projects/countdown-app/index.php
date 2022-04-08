@@ -20,20 +20,31 @@
   <body>
 
     <?php 
-
-        echo 'App is running...'
-
+        $date = date('2021-02-18');
+        $time = date('12:25:00');
+        $date_today = $date . '' . $time;
     ?>
-
-
-    <!-- JavaScript -->
-    <!-- <script src="NAME OF JAVASCRIPT FILE .JS"> </script> -->
-
-    <!--
     <script>
-      alert("Hello, world");
+      // set the date we are counting down to 
+      let count_id = "<?php echo $date_today; ?>";
+      let countDownDate = new Date(count_id).getTime();
+
+      // update the court down every 1 second
+      let x = setInterval(function(){
+        // get todays date and time
+        let now = new Date().getTime();
+        // find the disatance between now and the count down date
+        let distance = count - now;
+        // time calculations for day,hours,minutes and seconds
+        let days = Math.floor(distance/(1000 * 60 * 60 * 24));
+        let hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+        let minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+        let seconds = Math.floor((distance%(1000*60))/(1000));
+
+        // output countdown 
+      });
     </script> 
-    -->
+    
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
